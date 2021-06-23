@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.zup.edu";
+option java_outer_classname = "CasaDoCodigo";
+option objc_class_prefix = "HLW";
+
+package com.zup.edu;
+
+service CasaDoCodigoService {
+  rpc send (CasaDoCodigoRequest) returns (CasaDoCodigoReply) {}
+}
+
+message CasaDoCodigoRequest {
+  string name = 1;
+}
+
+message CasaDoCodigoReply {
+  string message = 1;
+}
