@@ -7,14 +7,18 @@ option objc_class_prefix = "HLW";
 
 package com.zup.edu;
 
-service CasaDoCodigoService {
-  rpc send (CasaDoCodigoRequest) returns (CasaDoCodigoReply) {}
+service CadastroAutorService {
+  rpc cadatro(CadastroAutorRequest) returns (CadastroAutorResponse) {}
 }
 
-message CasaDoCodigoRequest {
-  string name = 1;
+message CadastroAutorRequest {
+  string nome = 1;
+  string email = 2;
+  string descricao = 3;
 }
 
-message CasaDoCodigoReply {
-  string message = 1;
+message CadastroAutorResponse {
+  string nome = 1;
+  string email = 2;
+  string descricao = 3;
 }
