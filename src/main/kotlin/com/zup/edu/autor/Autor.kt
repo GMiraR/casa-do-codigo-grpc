@@ -27,7 +27,7 @@ class Autor(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: UUID? = null
+    val id: Long? = null
 
     @Column(nullable = false)
     val instante: LocalDateTime = LocalDateTime.now()
